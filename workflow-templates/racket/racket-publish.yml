@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: Bogdanp/setup-racket@v1.8.1
+      - uses: Bogdanp/setup-racket@v1.9
         with:
-          architecture: "x64"
-          distribution: "minimal"
-          variant: "CS"
-          version: "stable"
+          architecture: x64
+          distribution: full
+          variant: CS
+          version: stable
       - name: Build
         run: |
           raco pkg install --auto --skip-installed
